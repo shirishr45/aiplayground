@@ -13,25 +13,13 @@ set -euo pipefail  # Exit on error, undefined vars, pipe failures
 # ── Model definitions (parallel arrays, must match serve.sh order) ────────────
 MODEL_NAMES=(
   "Qwen3.5-27B  Q4_K_M  (~16GB)"
-  "Qwen3.5-27B  Q8_0    (~28GB, higher quality)"
-  "Qwen3-32B    Q4_K_M  (~20GB)"
   "Qwen3.5-35B-A3B Q4_K_M (~20GB, MoE)"
-  "Qwen3.6-35B-A3B Q4_K_M (~20GB, MoE)"
-  "Qwen3-30B-A3B Q4_K_M (~18GB, MoE — fastest)"
-  "Llama-3.3-70B Q4_K_M (~40GB)"
-  "Hermes-3-Llama-3.1-70B Q4_K_M (~40GB, tool calling)"
 )
 
 # Model identifiers passed to Claude Code via ANTHROPIC_MODEL
 MODEL_IDS=(
   "qwen3.5-27b-q4"
-  "qwen3.5-27b-q8"
-  "qwen3-32b-q4"
   "qwen3.5-35b-a3b-q4"
-  "qwen3.6-35b-a3b-q4"
-  "qwen3-30b-a3b-q4"
-  "llama-3.3-70b-q4"
-  "hermes-3-llama-3.1-70b-q4"
 )
 
 # ── Defaults ──────────────────────────────────────────────────────────────────
