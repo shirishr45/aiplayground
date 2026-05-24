@@ -14,6 +14,7 @@ NAMES=(
   "Qwen3.5-35B-A3B Q4_K_M (~20GB, MoE)"
   "Qwen3.6-35B-A3B Q4_K_M (~20GB, MoE)"
   "Qwen3-30B-A3B Q4_K_M (~18GB, MoE — fastest)"
+  "Qwen3.6-35B-A3B-MTP UD-Q4_K_M (~23GB, MoE, Unsloth)"
   "Llama-3.3-70B Q4_K_M (~40GB)"
   "Hermes-3-Llama-3.1-70B Q4_K_M (~40GB, tool calling)"
 )
@@ -25,6 +26,7 @@ REPOS=(
   "/Users/shirish/.lmstudio/models/lmstudio-community/Qwen3.5-35B-A3B-GGUF/Qwen3.5-35B-A3B-Q4_K_M.gguf"
   "models/Qwen_Qwen3.6-35B-A3B-Q4_K_M.gguf"
   "bartowski/Qwen_Qwen3-30B-A3B-GGUF:Q4_K_M"
+  "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_M"
   "bartowski/Llama-3.3-70B-Instruct-GGUF:Q4_K_M"
   "NousResearch/Hermes-3-Llama-3.1-70B-GGUF:Q4_K_M"
 )
@@ -36,6 +38,7 @@ CTX=(
   32768   # Qwen3.5-35B-A3B — 32GB available after weights
   32768   # Qwen3.6-35B-A3B — 32GB available after weights
   32768   # Qwen3-30B-A3B — 34GB available after weights
+  32768   # Qwen3.6-35B-A3B-MTP — 32GB available after weights
   65536   # Llama-3.3-70B — 12GB available, can push to 64K
   32768   # Hermes-3-70B  — 12GB available after weights
 )
@@ -47,6 +50,7 @@ EXTRA=(
   "--reasoning off"
   "--reasoning off"
   "--reasoning off"
+  "--reasoning off --spec-type draft-mtp"
   ""
   ""
 )
